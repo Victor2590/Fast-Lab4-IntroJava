@@ -75,11 +75,26 @@ public class SkeletonJava {
 
     /* here starts the main class */
     public static void main(String[] arguments) {
-        int a = readIntGUI("Introduceti un numar:"); // input using GUI
-        printGUI("Ati introdus:" + a); // output using GUI
 
-        int b = readIntConsole("Introduceti alt numar:");  // input using console
-        printConsole("Ati introdus:" + b); // output using console
+        int sum=0;
+        int[] note=new int [3];
+
+        for(int i=0;i<note.length;i++) {
+            note[i]=readIntGUI("introduceti nota");
+            sum+= note[i];
+        }
+        int media =sum/note.length;
+        System.out.println("media este:" +media);
+
+        int max = note[0];
+        for (int i=0; i<note.length;i++) {
+            if (note[i] > max) {
+                max = note[i];
+
+             }
+        }
+        System.out.println("nota maxima e:" +max);
+
     }
     //end of main method
 }

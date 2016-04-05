@@ -76,24 +76,41 @@ public class SkeletonJava {
     /* here starts the main class */
     public static void main(String[] arguments) {
 
-        int sum=0;
-        int[] note=new int [3];
 
-        for(int i=0;i<note.length;i++) {
-            note[i]=readIntGUI("introduceti nota");
-            sum+= note[i];
-        }
-        int media =sum/note.length;
-        System.out.println("media este:" +media);
 
-        int max = note[0];
-        for (int i=0; i<note.length;i++) {
-            if (note[i] > max) {
-                max = note[i];
+    /*
+    Se da un sir de numere ordonate crescator.
+    Se va determina daca un numar n exista in sir,
+    si daca exista se va afisa pozitia pe care s-a gasit, altfel se va afisa -1.
+    Cu ce difera algoritmul cand sirul este ordonat crescator de cazul cand sirul este neordonat.
+    sirul va fi definit asa, numerele sunt de exemplu.
+    int[] a = {1,3,4,6,7,8,10,12,14,23};
+    */
 
-             }
-        }
-        System.out.println("nota maxima e:" +max);
+
+
+                int[] a = {1, 3, 4, 6, 7, 8, 10, 12, 14, 23};
+                int n = readIntGUI("Introduceti numarul:");
+                int count = 0;
+
+                for (int i=0; i < a.length; i++) {
+                    // atata timp cat a[i] nu e egal cu n, incrementeaza count
+                    if (a[i] != n) {
+                        count++;
+                    } else {
+                        printGUI("Numarul a fost gasit la pozitia: " + i + " a sirului!");
+                    }
+                }
+
+                // daca count e egal cu lungimea sirului
+                // inseamna ca nr nu a fost gasit
+                if (count == a.length) {
+                    printGUI("-1");
+                }
+
+
+
+
 
     }
     //end of main method

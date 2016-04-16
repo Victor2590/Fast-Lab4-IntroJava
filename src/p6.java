@@ -12,7 +12,7 @@ numarul maxim, numarul minim, suma lor, sirul dublat .
         int min = n[0];
         int max = n[0];
         int sum = n[0];
-        int dub = n[0];
+
 
         for(int i=0; i<n.length; i++) {
             if (n[i] > max)
@@ -25,7 +25,7 @@ numarul maxim, numarul minim, suma lor, sirul dublat .
 
         }
 
-            System.out.println(" ");
+
             System.out.println("Cel mai mare numar: " + max);
             System.out.println("Cel mai mic numar: " + min);
             System.out.println("Suma numerelor din sir: " + sum);
